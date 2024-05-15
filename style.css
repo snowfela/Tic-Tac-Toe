@@ -40,8 +40,14 @@ body{
     border-radius: 1rem;
 }
 #message {
-    height: 50vmin; 
+    height: 15vmin;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
 }
+
 .hide{
     display: none;
 }

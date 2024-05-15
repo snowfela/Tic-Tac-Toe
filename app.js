@@ -15,8 +15,10 @@ const resetGame = () => {
         box.disabled = false;
         box.innerText = "";
     }    
-    msgContainer.classList.add("hide");
+    msg.innerText = ""; 
+    msgCtnr.classList.add("hide");
 };
+
 
 const disableBoxes = () => {
     for (let box of boxes) {
@@ -38,6 +40,7 @@ const checkWinner = () => {
         if (pos1 !="" && pos2 !="" && pos3 !=""){
             if (pos1==pos2 && pos2==pos3){
                 showWinner(pos1);
+                return true;
     }}}
 };
 
@@ -56,8 +59,8 @@ boxes.forEach((box) => {
         count++;
         let isWinner = checkWinner();
         if (count === 9 && !isWinner) {
-            msg.innerText = `Game was a Draw.`;
-            msgContainer.classList.remove("hide");
+            msg.innerText = `Game was a Draw !`;
+            msgCtnr.classList.remove("hide");
             disableBoxes();
         }
 })});
